@@ -34,7 +34,7 @@ A production-grade, open-source AI assistant purpose-built for nuclear engineeri
 #### 2. RAG-Powered Q&A with Citations
 - Natural language query interface
 - Retrieval: semantic search over document embeddings, top-k retrieval with reranking
-- Generation: Gemini 2.0 Flash (or latest) with retrieved context
+- Generation: Gemini 3.1 Pro (or latest) with retrieved context
 - Output format: answer + structured citation table (document name, page number, relevant passage, confidence)
 - Support/Refute table format (per EPRI TS-LLM pattern):
   ```

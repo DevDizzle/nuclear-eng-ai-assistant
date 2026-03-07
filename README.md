@@ -35,7 +35,7 @@ Frontend (Next.js) → FastAPI (Cloud Run) → Vertex AI (Gemini + Embeddings)
 
 - **Google Cloud Platform** — Vertex AI, BigQuery, Cloud Run, Firestore, Cloud Storage, Document AI
 - **Google Agent Development Kit (ADK)** — Agent orchestration
-- **Gemini 2.0 Flash / 2.5 Pro** — Generation and reasoning
+- **Gemini 3 Flash / 3.1 Pro** — Generation and reasoning
 - **FastAPI** — Backend API
 - **Next.js** — Frontend
 

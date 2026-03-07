@@ -27,7 +27,7 @@ Build a production-grade, open-source Nuclear Engineering AI Assistant on Google
 - `reranker.py` — simple relevance reranker using Gemini (score each chunk's relevance to the query, return top-5 by score)
 
 **4. Generation Layer (`src/generation/`)**
-- `gemini.py` — Gemini client wrapper. Support for Gemini 2.0 Flash and Gemini 2.5 Pro. Configurable model selection. Structured output via response_schema
+- `gemini.py` — Gemini client wrapper. Support for Gemini 3 Flash and Gemini 3.1 Pro. Configurable model selection. Structured output via response_schema
 - `citations.py` — Extract and format citations from Gemini responses. Map citations back to source document + page number from chunk metadata. Generate citation tables
 - `templates.py` — All prompt templates as constants:
   - Q&A system prompt (answer from context only, cite everything)

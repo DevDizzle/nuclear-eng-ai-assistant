@@ -20,7 +20,8 @@ class Settings(BaseSettings):
     
     # Model settings
     embedding_model: str = "text-embedding-005"
-    llm_model: str = "gemini-2.5-pro"
+    llm_model: str = "gemini-3.1-pro-preview"
+    llm_model_flash: str = "gemini-3-flash-preview"
     
     class Config:
         env_file = ".env"
