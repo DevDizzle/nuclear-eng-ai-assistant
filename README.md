@@ -41,6 +41,11 @@ Frontend (Next.js) → FastAPI (Cloud Run) → Vertex AI (Gemini + Embeddings)
 
 ## Quick Start
 
+### Live Demo
+- **Frontend UI:** [https://nuclear-ai-frontend-469352939749.us-central1.run.app](https://nuclear-ai-frontend-469352939749.us-central1.run.app)
+- **Backend API Docs:** [https://nuclear-eng-ai-assistant-469352939749.us-central1.run.app/docs](https://nuclear-eng-ai-assistant-469352939749.us-central1.run.app/docs)
+
+### Local Setup
 ```bash
 # Clone
 git clone https://github.com/DevDizzle/nuclear-eng-ai-assistant.git
