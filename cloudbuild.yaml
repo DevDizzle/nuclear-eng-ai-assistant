@@ -1,0 +1,27 @@
+steps:
+  # Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/nuclear-eng-ai-assistant', '.']
+
+  # Push the container image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/nuclear-eng-ai-assistant']
+
+  # Deploy container image to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'nuclear-eng-ai-assistant'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/nuclear-eng-ai-assistant'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--set-env-vars'
+      - 'NUKE_AI_GCP_PROJECT_ID=profitscout-lx6bb,NUKE_AI_GCP_REGION=us-central1,NUKE_AI_GCS_BUCKET_DOCUMENTS=nuclear-ai-documents,NUKE_AI_BQ_DATASET=nuclear_ai_audit,NUKE_AI_BQ_TABLE_AUDIT=audit_log,NUKE_AI_DOCAI_PROCESSOR_ID=b010e29dd201771a'
+images:
+  - 'gcr.io/$PROJECT_ID/nuclear-eng-ai-assistant'

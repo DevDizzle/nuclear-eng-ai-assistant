@@ -1,0 +1,7 @@
+venv/
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+deploy_error.log
+docker_build.log
