@@ -27,10 +27,16 @@ export default function ScreeningForm() {
     }
   };
 
+  const handleExportPDF = () => {
+    if (typeof window !== 'undefined') {
+      window.print();
+    }
+  };
+
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 h-full">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 h-full print:block print:w-full">
       {/* Input Section */}
-      <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col h-full">
+      <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col h-full print:hidden">
         <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
           <ShieldAlert className="text-amber-500" size={20} />
           Modification Description
@@ -53,36 +59,39 @@ export default function ScreeningForm() {
       </div>
 
       {/* Output Section */}
-      <div className="bg-gray-50 rounded-lg border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full relative">
-        <div className="bg-gray-200 px-6 py-3 border-b border-gray-300 flex justify-between items-center">
+      <div className="bg-gray-50 rounded-lg border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full relative print:border-none print:shadow-none print:bg-white print:overflow-visible">
+        <div className="bg-gray-200 px-6 py-3 border-b border-gray-300 flex justify-between items-center print:hidden">
           <h2 className="text-lg font-semibold text-gray-800">Preliminary Draft</h2>
           {result && (
-            <button className="flex items-center gap-2 text-sm bg-white border border-gray-300 px-3 py-1.5 rounded hover:bg-gray-50 transition">
+            <button 
+              onClick={handleExportPDF}
+              className="flex items-center gap-2 text-sm bg-white border border-gray-300 px-3 py-1.5 rounded hover:bg-gray-50 transition"
+            >
               <FileDown size={16} /> Export PDF
             </button>
           )}
         </div>
-        <div className="p-6 flex-1 overflow-y-auto">
+        <div className="p-6 flex-1 overflow-y-auto bg-white print:overflow-visible print:p-0">
           {!result && !loading && (
-            <div className="h-full flex items-center justify-center text-gray-400 text-center">
+            <div className="h-full flex items-center justify-center text-gray-400 text-center print:hidden">
               <p>Enter a modification description to generate a screening draft.</p>
             </div>
           )}
           {loading && (
-            <div className="h-full flex flex-col items-center justify-center text-gray-500">
+            <div className="h-full flex flex-col items-center justify-center text-gray-500 print:hidden">
               <Loader2 className="animate-spin mb-4" size={32} />
               <p>Searching design basis documents...</p>
             </div>
           )}
           {result && (
-            <div className="space-y-6 text-sm text-gray-800">
-              <div className="p-4 bg-yellow-50 border border-yellow-200 rounded text-yellow-800 font-semibold text-center mb-6">
-                {result.preliminary_warning}
+            <div id="pdf-content" className="space-y-6 text-sm text-gray-800 bg-white p-4 print:p-0 print:m-0">
+              <div className="p-4 bg-yellow-50 border border-yellow-200 rounded text-yellow-800 font-semibold text-center mb-6 print:border print:border-gray-400">
+                {result.preliminary_warning || "PRELIMINARY DRAFT — NOT FOR REGULATORY SUBMISSION — REQUIRES LICENSED ENGINEER REVIEW"}
               </div>
 
               <div>
                 <h3 className="font-bold text-lg border-b pb-1 mb-2">1. Applicability Determination</h3>
-                <p>{result.applicability_determination}</p>
+                <p className="whitespace-pre-wrap">{result.applicability_determination}</p>
               </div>
 
               <div>
@@ -90,7 +99,7 @@ export default function ScreeningForm() {
                 <ul className="list-disc pl-5 space-y-1">
                   {result.affected_design_functions?.length > 0 ? 
                     result.affected_design_functions.map((f: string, i: number) => <li key={i}>{f}</li>) : 
-                    <li className="text-gray-500 italic">None identified in mock response</li>}
+                    <li className="text-gray-500 italic">None identified</li>}
                 </ul>
               </div>
 
@@ -99,7 +108,7 @@ export default function ScreeningForm() {
                 <ul className="list-disc pl-5 space-y-1">
                   {result.ufsar_cross_references?.length > 0 ? 
                     result.ufsar_cross_references.map((r: string, i: number) => <li key={i}>{r}</li>) :
-                    <li className="text-gray-500 italic">None identified in mock response</li>}
+                    <li className="text-gray-500 italic">None identified</li>}
                 </ul>
               </div>
 

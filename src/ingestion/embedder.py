@@ -5,7 +5,7 @@ import vertexai
 
 class VertexEmbedder:
     def __init__(self):
-        vertexai.init(project=settings.gcp_project_id, location=settings.gcp_region)
+        vertexai.init(project=settings.gcp_project_id, location="us-central1")
         self.model = TextEmbeddingModel.from_pretrained(settings.embedding_model)
 
     async def embed_chunks(self, texts: List[str]) -> List[List[float]]:
