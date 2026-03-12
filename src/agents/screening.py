@@ -1,3 +1,4 @@
+# DEPRECATED: This wrapper is replaced by src/adk/agents/screening_agent.py
 import json
 from src.models.screening import ScreeningRequest, ScreeningResponse
 from src.generation.gemini import GeminiClient

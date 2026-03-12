@@ -1,0 +1,26 @@
+Subject: Following up with work sample - AI Enablement Engineer
+
+Hi [Recruiter Name],
+
+Thanks again for reaching out regarding the AI Enablement Engineer position at NextEra Energy.
+
+To give the hiring manager a concrete example of my approach, I built a functional prototype targeted at NextEra's nuclear engineering workflows. I've attached my resume along with a short presentation ("A Practical Roadmap for Capital Design Teams").
+
+Could you please forward my resume, the attached presentation, and the links below to the hiring manager? 
+
+Live Prototype (10 CFR 50.59 AI Screening Assistant):
+https://nuclear-ai-frontend-469352939749.us-central1.run.app/screening
+
+Codebase & Technical Docs:
+https://github.com/DevDizzle/nuclear-eng-ai-assistant
+
+I believe this strongly demonstrates my ability to immediately contribute to NextEra's AI enablement goals.
+
+Looking forward to hearing from you.
+
+Best regards,
+
+Evan Parra
+(954) 548-7557
+eraphaelparra@gmail.com
+linkedin.com/in/evanparra

@@ -11,7 +11,7 @@ class VertexEmbedder:
     async def embed_chunks(self, texts: List[str]) -> List[List[float]]:
         """Generate embeddings using Vertex AI Embeddings API in batches."""
         embeddings = []
-        batch_size = 30
+        batch_size = 10
         for i in range(0, len(texts), batch_size):
             batch = texts[i:i+batch_size]
             emb_responses = self.model.get_embeddings(batch)

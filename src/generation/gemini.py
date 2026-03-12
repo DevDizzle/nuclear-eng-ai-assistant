@@ -1,3 +1,4 @@
+# DEPRECATED: LLM interactions are now handled via Google Cloud Agent Development Kit (ADK) Agents.
 import google.genai as genai
 from google.genai import types
 from src.config import settings

@@ -1,0 +1,5 @@
+Replacement of the existing centrifugal charging pump (CCP) motor bearings with a new sealed-bearing design. 
+
+The original bearings require periodic manual lubrication and have experienced early degradation due to vibration. The new sealed bearings are functionally equivalent in terms of load capacity and shaft speed, but completely eliminate the need for manual oiling. The physical dimensions of the motor casing will be slightly modified (bored out by 0.25 inches) to accommodate the new bearing housing. 
+
+This change does not affect the flow rate, discharge head, or electrical power requirements of the charging pump. The pump will continue to fulfill its safety function of providing high-pressure safety injection flow to the reactor coolant system (RCS) during a loss of coolant accident (LOCA).

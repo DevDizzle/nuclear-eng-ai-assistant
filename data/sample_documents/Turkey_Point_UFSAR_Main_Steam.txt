@@ -1,0 +1,27 @@
+[PAGE_1]
+Turkey Point Nuclear Generating Station
+Updated Final Safety Analysis Report (UFSAR)
+
+10.0 MAIN STEAM SYSTEM
+10.3 MAIN STEAM SYSTEM COMPONENTS
+
+The main steam system routes steam from the steam generators to the high-pressure turbine. 
+To monitor for potential primary-to-secondary leakage, the Main Steam Line Radiation Monitoring System is installed on each main steam line. 
+
+11.0 RADIATION MONITORING SYSTEM
+11.4 PROCESS AND EFFLUENT RADIOLOGICAL MONITORING
+
+11.4.2 Main Steam Line Radiation Monitors
+The Main Steam Line (MSL) radiation monitors are analog instrumentation designed to detect radioactive material in the main steam system, which would be indicative of a Steam Generator Tube Rupture (SGTR) event.
+The analog monitors perform the following specific design functions:
+1. Provide continuous Control Room alarms when radiation levels exceed the high setpoint, alerting operators to a potential SGTR.
+2. Provide primary-to-secondary leakage monitoring to ensure Technical Specification limits are not exceeded during normal operations.
+3. Act as Post-Accident Monitoring (PAM) instrumentation in accordance with Regulatory Guide 1.97.
+
+[PAGE_2]
+14.0 SAFETY ANALYSIS
+14.2 STEAM GENERATOR TUBE RUPTURE (SGTR)
+
+The design basis accident analysis for an SGTR relies on the early detection of primary-to-secondary leakage. The Main Steam Line radiation monitors provide the initial detection and alarm. The analog monitors have a specified response time of < 2.0 seconds to ensure the operator can manually trip the reactor and initiate the safety injection system if the automatic actuation systems fail.
+
+Any modification to these monitors, including digital transmitter replacement, must ensure that the < 2.0-second response time and the reliability of the Control Room alarms are not adversely affected by digital processing delays or software common cause failures.

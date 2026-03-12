@@ -1,3 +1,4 @@
+# DEPRECATED: This wrapper is replaced by src/adk/agents/retrieval_agent.py
 from src.retrieval.search import VectorSearch
 from src.retrieval.reranker import Reranker
 from src.generation.gemini import GeminiClient
