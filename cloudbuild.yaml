@@ -22,6 +22,6 @@ steps:
       - 'managed'
       - '--allow-unauthenticated'
       - '--set-env-vars'
-      - 'NUKE_AI_GCP_PROJECT_ID=profitscout-lx6bb,NUKE_AI_GCP_REGION=us-central1,NUKE_AI_GCS_BUCKET_DOCUMENTS=nuclear-ai-documents,NUKE_AI_BQ_DATASET=nuclear_ai_audit,NUKE_AI_BQ_TABLE_AUDIT=audit_log,NUKE_AI_DOCAI_PROCESSOR_ID=b010e29dd201771a'
+      - 'NUKE_AI_GCP_PROJECT_ID=profitscout-lx6bb,NUKE_AI_GCP_REGION=us-central1,NUKE_AI_GCS_BUCKET_DOCUMENTS=nuclear-ai-documents,NUKE_AI_BQ_DATASET=nuclear_ai_audit,NUKE_AI_BQ_TABLE_AUDIT=audit_log,NUKE_AI_DOCAI_PROCESSOR_ID=b010e29dd201771a,GOOGLE_GENAI_USE_VERTEXAI=1,GOOGLE_CLOUD_PROJECT=profitscout-lx6bb,GOOGLE_CLOUD_LOCATION=global'
 images:
   - 'gcr.io/$PROJECT_ID/nuclear-eng-ai-assistant'
